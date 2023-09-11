@@ -29,7 +29,10 @@ end
 
 function WallpaperChanger.randomize(path)
 	gears.timer.start_new(1*60*60, function()
-		local images = getImages(path)
+		local images, err = pcall(getImages(path));
+    if (err) then
+      return false
+    end
 		if next(images) == nil then
 			return false
 		end

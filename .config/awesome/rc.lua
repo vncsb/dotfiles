@@ -9,12 +9,6 @@
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-package.path = package.path
-	.. ";"
-	.. "/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua;/usr/lib/lua/5.3/?.lua;/usr/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/home/vncsb/.luarocks/share/lua/5.3/?.lua;/home/vncsb/.luarocks/share/lua/5.3/?/init.lua"
-package.cpath = package.cpath
-	.. ";"
-	.. "/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so;/home/vncsb/.luarocks/lib/lua/5.3/?.so"
 pcall(require, "luarocks.loader")
 
 local gears = require("gears")

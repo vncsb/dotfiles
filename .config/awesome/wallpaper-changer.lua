@@ -1,3 +1,4 @@
+pcall(require, "luarocks.loader")
 local gears = require("gears")
 local lfs = require("lfs")
 
@@ -29,8 +30,8 @@ end
 
 function WallpaperChanger.randomize(path)
 	gears.timer.start_new(1*60*60, function()
-		local images, err = pcall(getImages(path));
-    if (err) then
+		local ok, images = pcall(getImages, path);
+    if not ok then
       return false
     end
 		if next(images) == nil then

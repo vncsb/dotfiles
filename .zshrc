@@ -50,10 +50,19 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 ZLE_RPROMPT_INDENT=0
 
 # Load keychain
-eval $(keychain --eval --quiet id_ed25519)
+if command -v keychain &> /dev/null
+then
+  eval $(keychain --eval --quiet id_ed25519)
+fi
 
 # Install asdf-vm
-. /opt/asdf-vm/asdf.sh
+if [ -d "/opt/asdf-vm" ]
+then
+  . /opt/asdf-vm/asdf.sh
+else
+  . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
+  . "$HOME/.nix-profile/share/bash-completion/completions/asdf.bash"
+fi
 
 # Aliases
 alias ls="exa -l -a -h --icons --group-directories-first --time-style=long-iso"

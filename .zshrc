@@ -59,9 +59,6 @@ fi
 if [ -d "/opt/asdf-vm" ]
 then
   . /opt/asdf-vm/asdf.sh
-else
-  . "$HOME/.nix-profile/share/asdf-vm/asdf.sh"
-  . "$HOME/.nix-profile/share/bash-completion/completions/asdf.bash"
 fi
 
 # Aliases

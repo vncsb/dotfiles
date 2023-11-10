@@ -254,7 +254,7 @@ globalkeys = mytable.join(
 	awful.key({ modkey, "Shift" }, "r", function()
 		lain.util.rename_tag()
 	end, { description = "rename tag", group = "tag" }),
-	awful.key({ modkey, "Shift" }, "h", function()
+	awful.key({ modkey, "Control", "Shift" }, "h", function()
 		lain.util.move_tag(-1)
 	end, { description = "move tag to the left", group = "tag" }),
 	awful.key({ modkey, "Control", "Shift" }, "l", function()

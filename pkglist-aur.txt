@@ -1,7 +1,0 @@
-asdf-vm
-awesome-freedesktop-git
-cdm
-lain-git
-ttf-meslo-nerd-font-powerlevel10k
-xvkbd
-yay

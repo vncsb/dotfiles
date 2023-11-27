@@ -64,3 +64,9 @@ fi
 # Aliases
 alias ls="exa -l -a -h --icons --group-directories-first --time-style=long-iso"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# Binds
+
+# Binds to make Ctrl + arrows jump a word
+bindkey "^[[1;5C" forward-word 
+bindkey "^[[1;5D" backward-word

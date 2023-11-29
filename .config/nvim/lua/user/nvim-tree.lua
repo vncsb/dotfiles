@@ -74,9 +74,9 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "l", api.node.open.edit, opts "Open")
   vim.keymap.set("n", "<CR>", api.node.open.edit, opts "Open")
   vim.keymap.set("n", "o", api.node.open.edit, opts "Open")
-  vim.keymap.set("n", "h", api.node.navigate.parent_close, opts "Close Directory")
+  vim.keymap.set("n", "x", api.node.navigate.parent_close, opts "Close Directory")
   vim.keymap.set("n", "v", api.node.open.vertical, opts "Open: Vertical Split")
-  vim.keymap.set("n", "x", api.node.open.horizontal, opts "Open: Horizontal Split")
+  vim.keymap.set("n", "h", api.node.open.horizontal, opts "Open: Horizontal Split")
 end
 
 function M.config()

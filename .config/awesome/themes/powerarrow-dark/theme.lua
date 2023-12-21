@@ -125,7 +125,7 @@ local temp = lain.widget.temp({
 -- ALSA volume
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume = lain.widget.alsa({
-  channel = "PCM",
+  channel = "EVO4 ",
 	settings = function()
 		if volume_now.status == "off" then
 			volicon:set_image(theme.widget_vol_mute)
@@ -213,12 +213,9 @@ function theme.at_screen_connect(s)
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
 			wibox.widget.systray(),
-			keyboardlayout,
-			spr,
-			arrl_ld,
-			wibox.container.background(volicon, theme.bg_focus),
-			wibox.container.background(theme.volume.widget, theme.bg_focus),
-			arrl_dl,
+      arrl_ld,
+			wibox.container.background(keyboardlayout, theme.bg_focus),
+      arrl_dl,
 			memicon,
 			mem.widget,
 			arrl_ld,

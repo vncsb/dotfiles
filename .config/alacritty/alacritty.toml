@@ -1,0 +1,12 @@
+[env]
+TERM = "xterm-256color"
+
+[font.normal]
+family = "MesloLGS NF"
+
+[shell]
+args = ["-l", "-c", "tmux new"]
+program = "zsh"
+
+[window]
+dynamic_padding = true

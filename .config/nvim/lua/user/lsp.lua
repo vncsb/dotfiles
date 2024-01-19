@@ -8,6 +8,9 @@ local M = {
       "hrsh7th/cmp-nvim-lsp",
       commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef",
     },
+    {
+      "williamboman/mason.nvim",
+    }
   },
 }
 

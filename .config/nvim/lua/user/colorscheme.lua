@@ -6,6 +6,9 @@ local M = {
 
 M.name = "gruvbox"
 function M.config()
+  require("gruvbox").setup({
+    transparent_mode = vim.g.transparent_enabled
+  })
   local status_ok, _ = pcall(vim.cmd.colorscheme, M.name)
   if not status_ok then
     return

@@ -508,6 +508,7 @@ awful.rules.rules = {
 			-- and the name shown there might not match defined rules here.
 			name = {
 				"Event Tester", -- xev.
+				"Emulator",
 			},
 			role = {
 				"AlarmWindow", -- Thunderbird's calendar.
@@ -524,6 +525,11 @@ awful.rules.rules = {
 		properties = { titlebars_enabled = false },
 	},
 
+	{
+		rule = { name = { "Emulator" } },
+		properties = { floating = true },
+	},
+
 	-- Set Firefox to always map on the tag named "2" on screen 1.
 	-- { rule = { class = "Firefox" },
 	--   properties = { screen = 1, tag = "2" } },
@@ -538,6 +544,12 @@ client.connect_signal("manage", function(c)
 	-- Set the windows at the slave,
 	-- i.e. put it at the end of others instead of setting it master.
 	-- if not awesome.startup then awful.client.setslave(c) end
+
+	-- naughty.notify({
+	-- 	preset = naughty.config.presets.critical,
+	-- 	title = "Oops, an error happened!",
+	-- 	text = tostring(c.instance),
+	-- })
 
 	if awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
 		-- Prevent clients from being unreachable after screen count changes.

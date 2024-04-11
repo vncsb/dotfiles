@@ -353,7 +353,12 @@ globalkeys = mytable.join(
 	-- Prompt
 	awful.key({ modkey }, "r", function()
 		awful.screen.focused().mypromptbox:run()
-	end, { description = "run prompt", group = "launcher" })
+	end, { description = "run prompt", group = "launcher" }),
+
+  -- Printscreen/Screenshot
+  awful.key({ modkey, altkey}, "s", function ()
+    os.execute("maim -s | xclip -selection clipboard -target image/png")
+  end, { description = "select area to screenshot", group = "hotkeys"})
 	--]]
 )
 

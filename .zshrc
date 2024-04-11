@@ -55,6 +55,12 @@ then
   eval $(keychain --eval --quiet id_ed25519)
 fi
 
+# Auto start tmux logging
+SHOULD_LOG= "${TMUX_LOGGING:-false}"
+if [ ! -z $TMUX ] && [ "$SHOULD_LOG" = true ]; then
+  $HOME/.ensure-tmux-logging.sh
+fi
+
 # Install asdf-vm
 if [ -d "/opt/asdf-vm" ]
 then
@@ -70,3 +76,6 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Binds to make Ctrl + arrows jump a word
 bindkey "^[[1;5C" forward-word 
 bindkey "^[[1;5D" backward-word
+
+# Bind to make Ctrl + backspace delete a word
+bindkey '^H' backward-kill-word

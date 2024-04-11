@@ -56,7 +56,7 @@ then
 fi
 
 # Auto start tmux logging
-SHOULD_LOG= "${TMUX_LOGGING:-false}"
+SHOULD_LOG="${TMUX_LOGGING:-false}"
 if [ ! -z $TMUX ] && [ "$SHOULD_LOG" = true ]; then
   $HOME/.ensure-tmux-logging.sh
 fi

@@ -12,7 +12,6 @@ M.servers = {
 	"rust_analyzer",
 	"rnix",
 	"omnisharp",
-  "powershell_es"
 }
 
 return M

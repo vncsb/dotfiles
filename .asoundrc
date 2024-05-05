@@ -1,4 +1,0 @@
-defaults.pcm.!card "EVO4";
-defaults.ctl.!card "EVO4";
-
-defaults.pcm.rate_converter "speexrate_medium"

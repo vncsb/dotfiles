@@ -49,10 +49,20 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ZLE_RPROMPT_INDENT=0
 
+# Define default editor and vi as nvim
+export VISUAL=nvim
+export EDITOR=nvim
+alias vi="nvim"
+
 # Load keychain
 if command -v keychain &> /dev/null
 then
   eval $(keychain --eval --quiet id_ed25519)
+fi
+
+# Auto start tmux
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
 
 # Auto start tmux logging

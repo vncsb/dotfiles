@@ -12,6 +12,7 @@ M.servers = {
 	"rust_analyzer",
 	"rnix",
 	"omnisharp",
+	"clangd",
 }
 
 return M

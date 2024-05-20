@@ -9,3 +9,4 @@ program = "zsh"
 
 [window]
 dynamic_padding = true
+

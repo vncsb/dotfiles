@@ -168,11 +168,6 @@ end)
 -- {{{ Key bindings
 
 globalkeys = mytable.join(
-	-- Destroy all notifications
-	awful.key({ "Control" }, "space", function()
-		naughty.destroy_all_notifications()
-	end, { description = "destroy all notifications", group = "hotkeys" }),
-
 	-- Show help
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 

@@ -115,4 +115,7 @@ function zvm_after_init() {
   # Search history based on autocomplete 
   bindkey '^p' history-search-backward
   bindkey '^n' history-search-forward
+
+  # Accept autocomplete
+  bindkey '^ ' autosuggest-accept
 }

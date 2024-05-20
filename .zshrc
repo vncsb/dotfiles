@@ -98,7 +98,6 @@ fi
 
 # Aliases
 alias ls="exa -l -a -h --icons --group-directories-first --time-style=long-iso"
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Case insensitive completions 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

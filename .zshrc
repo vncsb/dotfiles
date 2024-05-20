@@ -118,3 +118,6 @@ function zvm_after_init() {
   # Accept autocomplete
   bindkey '^ ' autosuggest-accept
 }
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

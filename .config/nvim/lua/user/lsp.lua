@@ -8,7 +8,7 @@ local M = {
 			"hrsh7th/cmp-nvim-lsp",
 			commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef",
 		},
-    "nvimdev/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		"williamboman/mason.nvim",
 	},
 }
@@ -74,7 +74,9 @@ function M.config()
 
 	local config = {
 		-- disable virtual text
-		virtual_text = false,
+		virtual_text = {
+			severity = { min = vim.diagnostic.severity.WARN },
+		},
 		-- show signs
 		signs = {
 			active = signs,

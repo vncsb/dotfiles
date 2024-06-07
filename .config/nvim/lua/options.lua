@@ -45,8 +45,12 @@ vim.opt.relativenumber   = true                 -- make line numbers relative to
 vim.opt.linebreak        = true
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- My opts
+vim.opt.virtualedit = "block"
 vim.filetype.add({
   extension = {
     typ = "typst",
   },
 })
+

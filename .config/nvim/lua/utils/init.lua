@@ -13,7 +13,6 @@ M.servers = {
 	"rnix",
 	"omnisharp",
 	"clangd",
-  "typst_lsp"
 }
 
 return M

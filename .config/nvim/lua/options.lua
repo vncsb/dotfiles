@@ -47,6 +47,7 @@ vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- My opts
+vim.g.python3_host_prog = "/home/vncsb/.pyenv/versions/py3nvim/bin/python"
 vim.opt.virtualedit = "block"
 vim.filetype.add({
   extension = {

@@ -1,6 +1,6 @@
 local M = {
 	"neovim/nvim-lspconfig",
-	commit = "649137cbc53a044bffde36294ce3160cb18f32c7",
+	commit = "0b8165cf95806bc4bb8f745bb0c92021b2ed4b98",
 	lazy = false,
 	event = { BufReadPre },
 	dependencies = {
@@ -8,7 +8,7 @@ local M = {
 			"hrsh7th/cmp-nvim-lsp",
 			commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef",
 		},
-    "nvimdev/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		"williamboman/mason.nvim",
 	},
 }
@@ -74,7 +74,9 @@ function M.config()
 
 	local config = {
 		-- disable virtual text
-		virtual_text = false,
+		virtual_text = {
+			severity = { min = vim.diagnostic.severity.WARN },
+		},
 		-- show signs
 		signs = {
 			active = signs,

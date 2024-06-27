@@ -96,6 +96,9 @@ then
   . /opt/asdf-vm/asdf.sh
 fi
 
+# Add cargo binaries to path
+export PATH=/home/vncsb/.cargo/bin/:$PATH
+
 # Aliases
 alias ls="exa -l -a -h --icons --group-directories-first --time-style=long-iso"
 

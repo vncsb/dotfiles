@@ -1,6 +1,6 @@
 local M = {
   settings = {
-    exportPdf = "onType"
+    exportPdf = "never"
   }
 }
 

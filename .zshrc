@@ -1,9 +1,3 @@
-# Load keychain
-if command -v keychain &> /dev/null
-then
-  eval $(keychain --eval --quiet id_ed25519)
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -96,6 +90,9 @@ then
   . /opt/asdf-vm/asdf.sh
 fi
 
+# Add pip packages to path
+export PATH=~/.local/bin/:$PATH
+
 # Add cargo binaries to path
 export PATH=/home/vncsb/.cargo/bin/:$PATH
 
@@ -121,3 +118,14 @@ function zvm_after_init() {
   # Accept autocomplete
   bindkey '^ ' autosuggest-accept
 }
+
+# Setting up fzf
+if command -v fzf &> /dev/null
+then
+  source <(fzf --zsh)
+  export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
+  bindkey '^R' fzf-history-widget
+fi
+
+# Setting up zoxide
+eval "$(zoxide init zsh)"

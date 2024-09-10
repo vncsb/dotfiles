@@ -91,10 +91,10 @@ then
 fi
 
 # Add pip packages to path
-export PATH=~/.local/bin/:$PATH
+export PATH="$HOME/.local/bin/:$PATH"
 
 # Add cargo binaries to path
-export PATH=/home/vncsb/.cargo/bin/:$PATH
+export PATH="$HOME/.cargo/bin/:$PATH"
 
 # Aliases
 alias ls="exa -l -a -h --icons --group-directories-first --time-style=long-iso"

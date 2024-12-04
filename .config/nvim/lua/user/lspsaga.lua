@@ -1,6 +1,6 @@
 local M = {
 	"nvimdev/lspsaga.nvim",
-	commit = "2198c07124bef27ef81335be511c8abfd75db933",
+	commit = "f0b5d2ce3912a9d84fae8083cb9cab90def39f3e",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 		{

@@ -11,16 +11,7 @@ function M.config()
 	require("img-clip").setup({
 		default = {
 			dir_path = "images",
-			relative_to_current_file = true,
-		},
-		filetypes = {
-			typst = {
-				template = [[
-#figure(
-  image("$FILE_PATH", width: 80%),
-)
-        ]], ---@type string
-			},
+      relative_to_current_file = true,
 		},
 	})
 end

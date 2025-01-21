@@ -331,7 +331,7 @@ globalkeys = mytable.join(
 	end, { description = "copy terminal to gtk", group = "hotkeys" }),
 	-- Copy clipboard to primary (gtk to terminals)
 	awful.key({ modkey }, "v", function()
-		awful.spawn.with_shell("xsel -b | xsel")
+		awful.spawn("l2c")
 	end, { description = "copy gtk to terminal", group = "hotkeys" }),
 
 	-- User programs

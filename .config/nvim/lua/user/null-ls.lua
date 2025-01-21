@@ -23,8 +23,12 @@ function M.config()
 				extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 			}),
 			formatting.black.with({ extra_args = { "--fast" } }),
+      formatting.isort,
 			formatting.stylua,
 			formatting.typstyle,
+      formatting.gofumpt,
+      formatting.goimports_reviser,
+      formatting.golines,
 			require("none-ls.diagnostics.ruff"), -- From none-ls-extras
 		},
 	})

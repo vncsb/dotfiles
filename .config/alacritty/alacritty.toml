@@ -17,9 +17,11 @@ style = "Italic"
 family = "FiraCode Nerd Font"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 program = "zsh"
 
 [window]
 dynamic_padding = true
+
+[terminal]
 

@@ -46,7 +46,7 @@ local M = {
 function M.config()
 	local cmp = require("cmp")
 	local luasnip = require("luasnip")
-	require("luasnip/loaders/from_vscode").lazy_load()
+	require("luasnip.loaders.from_vscode").lazy_load()
 
 	local check_backspace = function()
 		local col = vim.fn.col(".") - 1
@@ -82,6 +82,8 @@ function M.config()
 		Codeium = "󰚩",
 		Copilot = "",
 	}
+
+  luasnip.filetype_extend("templ", {"html"})
 
 	cmp.setup({
 		snippet = {

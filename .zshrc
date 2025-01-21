@@ -129,3 +129,10 @@ fi
 
 # Setting up zoxide
 eval "$(zoxide init zsh)"
+
+# Setting up direnv
+eval "$(direnv hook zsh)"
+
+# Setting up uv
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"

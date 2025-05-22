@@ -1,40 +1,31 @@
 local M = {
 	"hrsh7th/nvim-cmp",
-	commit = "5260e5e8ecadaf13e6b82cf867a909f54e15fd07",
 	dependencies = {
 		{
 			"hrsh7th/cmp-nvim-lsp",
-			commit = "39e2eda76828d88b773cc27a3f61d2ad782c922d",
 		},
 		{
 			"hrsh7th/cmp-buffer",
-			commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa",
 		},
 		{
 			"hrsh7th/cmp-path",
-			commit = "91ff86cd9c29299a64f968ebb45846c485725f23",
 		},
 		{
 			"hrsh7th/cmp-cmdline",
-			commit = "d250c63aa13ead745e3a40f61fdd3470efde3923",
 		},
 		{
 			"saadparwaiz1/cmp_luasnip",
-			commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
 		},
 		{
 			"L3MON4D3/LuaSnip",
-			commit = "d890d6d6b98a5f9886f17644643698c4d7f5e891",
 			event = "InsertEnter",
 			build = "make install_jsregexp",
 			dependencies = {
 				"rafamadriz/friendly-snippets",
-				commit = "e11b09bf10706bb74e16e4c3d11b2274d62e687f",
 			},
 		},
 		{
 			"hrsh7th/cmp-nvim-lua",
-			commit = "f12408bdb54c39c23e67cab726264c10db33ada8",
 		},
 	},
 	event = {

@@ -13,7 +13,7 @@ M.servers = {
 	"nil_ls",
 	"omnisharp",
 	"clangd",
-	"typst_lsp",
+  "tinymist",
 	"gopls",
   "templ",
   "tailwindcss"
